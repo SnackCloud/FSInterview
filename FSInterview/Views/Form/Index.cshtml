@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Form";
+}
+@model Account
+
+<div class="text-center">
+    <h1 class="display-4">Form</h1>
+
+    @using (Html.BeginForm("Submit", "Form", FormMethod.Post))
+    {
+        @Html.LabelFor(m => m.FirstName, "First Name:")
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+
+        @Html.LabelFor(m => m.LastName, "Last Name:")
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+
+        <input type="submit" class="btn btn-primary" />
+    }
+
+</div>
